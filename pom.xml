@@ -10,6 +10,9 @@
 	<modules>
 		<module>Registry</module>
 		<module>DataIngestor</module>
+		<module>ForecastTrigger</module>
+		<module>Gateway</module>
+		<module>RunWeatherForecast</module>
 	</modules>
 
 	<properties>
