@@ -8,8 +8,6 @@ jobs:
     checkstyles:
         runs-on: ubuntu-latest
         steps:
-            - name: Run checkstyles on code base
-              run: java -jar ./checkstyle-8.33-all.jar -c ./checkstyles.xml .
             - name: Set up jdk 1.8
               uses: actions/setup-java@v1
               with:
