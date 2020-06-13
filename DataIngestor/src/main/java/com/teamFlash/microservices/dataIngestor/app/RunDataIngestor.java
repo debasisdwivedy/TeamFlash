@@ -7,7 +7,6 @@ import com.teamFlash.microservices.dataIngestor.routes.DataIngestorRouteBuilder;
 
 public class RunDataIngestor {
 
-	private Main main;
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		RunDataIngestor instance=new RunDataIngestor();
@@ -20,14 +19,6 @@ public class RunDataIngestor {
 	    System.setProperty("port", port);
 
 	    // create a Main instance
-	    main = new Main();
-	    // enable hangup support so you can press ctrl + c to terminate the JVM
-	    main.enableHangupSupport();
-	    // add routes
-	    main.addRouteBuilder(new DataIngestorRouteBuilder());
-
-	    // run until you terminate the JVM
-	    System.out.println(String.format("Starting Camel, using port %s. Use ctrl + c to terminate the JVM.", port));
-	    main.run();
+	    
 	  }
 }
