@@ -1,0 +1,13 @@
+---
+name: CI
+on:
+    push:
+        branches: 
+            - dev
+
+name: Main CI Workflow
+jobs: 
+    checkstyles:
+        runs-on: ubuntu-latest
+        steps:
+            run: "java -jar checkstyle-8.33-all.jar -c checkstyles.xml  ."
