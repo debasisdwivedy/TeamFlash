@@ -1,6 +1,6 @@
 package com.teamFlash.microservices.dataIngestor.app;
 
-import org.apache.camel.main.Main;
+
 
 import com.teamFlash.microservices.dataIngestor.routes.DataIngestorRouteBuilder;
 

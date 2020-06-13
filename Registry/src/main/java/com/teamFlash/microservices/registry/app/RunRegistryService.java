@@ -1,6 +1,5 @@
 package com.teamFlash.microservices.registry.app;
 
-import org.apache.camel.main.Main;
 
 import com.teamFlash.microservices.registry.routes.RouteRegistryService;
 
