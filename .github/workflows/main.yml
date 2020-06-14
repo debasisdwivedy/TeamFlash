@@ -9,11 +9,22 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+              
             - name: Set up jdk 1.8
               uses: actions/setup-java@v1
               with:
                 java-version: 1.8
-            
+                
+            - name: Remove previous checkstyles report
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  git config --global user.name 'Debasis Dwivedy'
+                  git config --global user.email 'dwivedy.debasis@gmail.com'
+                  git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/debasisdwivedy/TeamFlash.git
+                  git rm -f checkstyles_audit
+                  git commit -m "Remove Checkstyles report"
+                  git push 
                   
             - name: Run Checkstyles for Java Code
               run: java -jar checkstyle-8.33-all.jar -c checkstyles.xml -o checkstyles_audit .
