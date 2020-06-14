@@ -22,10 +22,9 @@ jobs:
                 git config --global user.name 'Debasis Dwivedy'
                 git config --global user.email 'dwivedy.debasis@gmail.com'
                 git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/debasisdwivedy/TeamFlash.git
-                git checkout dev
                 git add checkstyles_audit
                 git commit -am "Checkstyles report"
-                git push origin dev
+                git push
     build:
         runs-on: ubuntu-latest
         steps:
