@@ -21,6 +21,8 @@ jobs:
                   git config --global user.email 'dwivedy.debasis@gmail.com'
                   git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/debasisdwivedy/TeamFlash.git
                   git rm -f checkstyles_audit
+                  git commit -m "Remove Checkstyles report"
+                  git push
                   
             - name: Run Checkstyles for Java Code
               run: java -jar checkstyle-8.33-all.jar -c checkstyles.xml -o checkstyles_audit .
